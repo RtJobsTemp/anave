@@ -1,0 +1,10 @@
+[07-Jan-2025 11:38:38 America/Sao_Paulo] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): Failed to open stream: No such file or directory in /home/agenciaanave/public_html/contact.php on line 6
+[07-Jan-2025 11:38:38 America/Sao_Paulo] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): Failed to open stream: No such file or directory in /home/agenciaanave/public_html/contact.php on line 6
+[07-Jan-2025 11:38:38 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/agenciaanave/public_html/contact.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/agenciaanave/public_html/contact.php on line 6
+[07-Jan-2025 11:53:35 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to undefined method PHPMailer\PHPMailer\PHPMailer::ReplyTo() in /home/agenciaanave/public_html/contact.php:37
+Stack trace:
+#0 {main}
+  thrown in /home/agenciaanave/public_html/contact.php on line 37
