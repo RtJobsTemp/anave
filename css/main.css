@@ -87,6 +87,20 @@ img{
     outline:none;
     max-width: 100%;
 }
+.gif-container {
+    width: 100%; /* O contêiner ocupa toda a largura disponível */
+    max-width: 1121px; /* Não ultrapassa o tamanho original do GIF */
+    margin: 0 auto; /* Centraliza o GIF na tela */
+    position: relative;
+}
+
+.responsive-gif {
+    width: 100%; /* O GIF se ajusta à largura do contêiner */
+    max-width: 100%; /* Garante que ele não fique maior que o contêiner */
+    height: auto; /* Mantém a proporção correta */
+    display: block;
+}
+
 ul{
     display: block;
     list-style: none;
