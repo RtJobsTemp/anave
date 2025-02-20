@@ -100,6 +100,14 @@ img{
     height: auto; /* Mantém a proporção correta */
     display: block;
 }
+.responsive-video {
+    width: 100%; /* O vídeo ocupa toda a largura do contêiner */
+    max-width: 1121px; /* Não ultrapassa o tamanho original */
+    height: auto; /* Mantém a proporção correta */
+    display: block;
+    margin: 0 auto; /* Centraliza o vídeo na página */
+    object-fit: cover; /* Garante que o vídeo preencha corretamente sem distorcer */
+}
 
 ul{
     display: block;
