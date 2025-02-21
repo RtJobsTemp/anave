@@ -11,15 +11,14 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 
-    <!-- Font Awesome -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700|Oswald:400,500,600,700&display=swap" as="style">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700|Oswald:400,500,600,700&display=swap">
+    <!-- Google Fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700|Oswald:400,500,600,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700|Oswald:400,500,600,700&display=swap">
 
-
-<!-- CSS Local -->
+<!-- CSS Principal -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
-
-<!-- Adiar carregamento de CSS secundários -->
+	
+<!-- Adiar carregamento de CSS secundários para melhorar performance -->
 <link rel="stylesheet" href="css/venobox/venobox.css" media="print" onload="this.onload=null;this.media='all';">
 <link rel="stylesheet" href="css/slicknav.min.css" media="print" onload="this.onload=null;this.media='all';">
 <link rel="stylesheet" href="css/animate.min.css" media="print" onload="this.onload=null;this.media='all';">
@@ -30,14 +29,39 @@
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/responsive.css">
 
-
-    <!-- Modernizr -->
+<!-- Modernizr (Certifique-se de incluir se necessário) -->
+<script src="js/vendor/modernizr.min.js"></script>
 
 </head>
 
+<!-- Estrutura do site -->
+<header></header>
+<section></section>
+
 <body data-spy="scroll" data-target="#navmenu" data-offset="70">
 
-    <!-- Preloader -->
+    <!-- Imagem de fundo inicial desfocada -->
+    <picture>
+        <source srcset="https://agenciaanave.com.br/img/hero-background.webp" type="image/webp">
+        <img src="https://agenciaanave.com.br/img/hero-background.jpg" id="blur-bg"
+     alt="Imagem de fundo"
+     style="position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: auto; filter: blur(25px); transition: filter 1s ease-out;" />
+
+    </picture>
+
+    <!-- Script para remover o blur após o carregamento -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let bgImage = document.getElementById("blur-bg");
+            if (bgImage) {
+                bgImage.style.filter = "blur(0px)"; // Remove o blur direto
+                bgImage.classList.add("blur-effect"); // Adiciona uma transição suave
+            }
+        });
+    </script>
+
+ 
+	      <!-- Preloader -->
 
 
     <!-- Header -->
@@ -62,6 +86,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="section hero-section d-flex align-items-center">
+		<img id="hero-bg" src="img/hero-background.webp" alt="Hero Background">
         <div class="container">
             <div class="hero-content text-center">
                 <h5>agência digital</h5>
@@ -182,7 +207,7 @@
                             <div class="col-lg-4 col-sm-6">
                                 <div class="portfolio-box">
                                     <div class="portfolio-thumb">
-                                        <img src="img/Jobs/job_anave_agencia_maceio_rtjobs_1.jpg" alt="img">
+                                        <img src="img/Jobs/job_anave_agencia_maceio_rtjobs_1.webp" alt="img">
                                     </div>
                                     
                                 </div>
@@ -203,7 +228,7 @@
                             <div class="col-lg-4 col-sm-6">
                                 <div class="portfolio-box">
                                     <div class="portfolio-thumb">
-                                        <img src="img/Jobs/job_anave_agencia_maceio_rtjobs_3.jpg" alt="img">
+                                        <img src="img/Jobs/job_anave_agencia_maceio_rtjobs_3.webp" alt="img">
                                     </div>
                                     
                                 </div>
@@ -228,7 +253,7 @@
                             <div class="col-lg-4 col-sm-6">
                                 <div class="portfolio-box">
                                     <div class="portfolio-thumb">
-                                        <img src="img/Jobs/job_anave_agencia_maceio_rtjobs_6.jpg" alt="img">
+                                        <img src="img/Jobs/job_anave_agencia_maceio_rtjobs_6.webp" alt="img">
                                     </div>
                                     
                                 </div>
@@ -244,7 +269,7 @@
                 <div class="cta-wrap text-center">
                     <div class="cta-content">
                         <h2>Agência de marketing em Maceió, <br> criando resultados que decolam<br> desde 2016.</h2>
-                        <a href="https://api.whatsapp.com/send?phone=5582996783383" class="default-btn">Pronto para Decolar?</a>
+                        <a href="https://api.whatsapp.com/send?phone=5582996515698" class="default-btn">Pronto para Decolar?</a>
                     </div>
                 </div>
             </div>
@@ -296,13 +321,12 @@
     </div>
 </section>
 
-
-		    <form action="contact.php" method="post" id="contact_form" class="form-horizontal">
-
+					    
 		<footer class="footer-section align-center">
 			<div class="container">
 				<p>&copy; 2025 aNave Agência</p>
 			</div>
+			
 		</footer><!-- /.footer_section -->
 
 		<a data-scroll href="#header" id="scroll-to-top">
@@ -345,7 +369,24 @@ document.oncontextmenu = new Function("return false;")
 
 </script>
 
-<script>(function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","asGLsOq63thsH80XPmcQcn4Wh")</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() { 
+          (function(a, b, c, d) {
+              try {
+                  var e = b.head || b.getElementsByTagName("head")[0];
+                  var f = b.createElement("script");
+                  f.setAttribute("src", c);
+                  f.setAttribute("charset", "UTF-8");
+                  f.defer = true;
+                  a.neuroleadId = d;
+                  e.appendChild(f);
+              } catch (g) {}
+          })(window, document, "https://cdn.leadster.com.br/neurolead/neurolead.min.js", "asGLsOq63thsH80XPmcQcn4Wh");
+      }, 1000); // 🕒 Agora o Leadster carrega **1 segundo** após o carregamento do DOM
+  });
+</script>
 
-    </body>
+
+</body>
 </html>
