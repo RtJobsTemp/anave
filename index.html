@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ferramentas para Designers | Arsenal RT</title>
+
+<!-- SEO -->
+<meta name="description" content="Ferramentas de Design para Designers: Photoshop, Illustrator, CorelDRAW, Microsoft Office e outros softwares prontos para uso, testados e com tutorial.">
+<meta name="keywords" content="ferramentas de design, photoshop, illustrator, coreldraw, office, softwares para designers, design gráfico">
+<meta name="author" content="Ronaldo Tenorio">
+<link rel="canonical" href="https://ronaldotenorio.com/arsenalrt3">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="https://ronaldotenorio.com/arsenalrt3/img/favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Ferramentas para Designers | Softwares Prontos para Uso"><strong></strong>
+<meta property="og:description" content="Baixe ferramentas essenciais: Photoshop, Illustrator, CorelDRAW, Office e mais. Todos testados e com tutorial passo a passo.">
+<meta property="og:image" content="https://ronaldotenorio.com/arsenalrt3/img/capa_compartilhada_adobe.jpg">
+<meta property="og:url" content="https://ronaldotenorio.com/arsenalrt3">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ferramentas para Designers | Softwares Essenciais">
+<meta name="twitter:description" content="Ferramentas de design testadas, prontas para uso e com tutorial.">
+<meta name="twitter:image" content="https://ronaldotenorio.com/arsenalrt3/img/capa_compartilhada_adobe.jpg">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHL73L4WPX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SHL73L4WPX');
+</script>
+
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+    t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+  }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','1834029590811260');
+  fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1834029590811260&ev=PageView&noscript=1" alt=""></noscript>
+
+<!-- Bloquear clique direito -->
+<script>
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('mousedown', e => { if(e.button===2||e.button===3) e.preventDefault(); });
+</script>
+
+<!-- Fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --purple:   #7B00E0;
+  --purple2:  #9B30FF;
+  --purple3:  #3D0080;
+  --blue:     #3D5AFF;
+  --blue2:    #6B8AFF;
+  --bg:       #F4F0FA;
+  --bg2:      #EDE7F6;
+  --white:    #FFFFFF;
+  --card:     #FFFFFF;
+  --text:     #1A0A2E;
+  --text2:    #5A4A7A;
+  --muted:    #9880BB;
+  --green:    #00C853;
+  --orange:   #FF6D00;
+  --red:      #F5222D;
+  --border:   #E8DCF8;
+  --nav-h:    68px;
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Nunito',sans-serif;
+  overflow-x:hidden;
+  padding-bottom:calc(var(--nav-h) + 16px);
+}
+
+	
+/* ── TOPBAR ── */
+.topbar{
+  position:sticky;top:0;z-index:200;
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  padding:12px 18px;
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 2px 12px rgba(123,0,224,.07);
+}
+.topbar-logo img{height:36px}
+.topbar-right{display:flex;align-items:center;gap:10px}
+.cart-pill{
+  background:linear-gradient(135deg,var(--purple),var(--blue));
+  color:#fff;border:none;border-radius:999px;
+  padding:8px 16px;
+  font-family:'Nunito',sans-serif;font-weight:800;font-size:.78rem;
+  cursor:pointer;display:flex;align-items:center;gap:7px;
+  box-shadow:0 3px 14px rgba(123,0,224,.3);
+  transition:transform .2s,box-shadow .2s;
+}
+.cart-pill:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(123,0,224,.4)}
+.cart-bubble{
+  background:#fff;color:var(--purple);
+  border-radius:50%;width:18px;height:18px;
+  font-size:.65rem;font-weight:900;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ── URGENCY TICKER ── */
+.ticker{
+  background:linear-gradient(90deg,var(--purple3),var(--purple),var(--blue),var(--purple));
+  background-size:300% 100%;
+  animation:ticker-slide 7s linear infinite;
+  color:#fff;text-align:center;
+  padding:8px 16px;font-size:.72rem;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;
+}
+@keyframes ticker-slide{0%{background-position:0 50%}100%{background-position:300% 50%}}
+
+/* ── HERO CAROUSEL ── */
+.carousel{position:relative;overflow:hidden;background:var(--white)}
+.carousel-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1)}
+.carousel-slide{
+  flex:0 0 100%;
+  background:linear-gradient(135deg,var(--purple3) 0%,var(--purple) 50%,var(--blue) 100%);
+  padding:36px 24px 32px;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;min-height:200px;position:relative;overflow:hidden;
+}
+.carousel-slide::before{
+  content:'';position:absolute;top:-60px;right:-60px;
+  width:220px;height:220px;
+  border-radius:50%;
+  background:rgba(255,255,255,.06);
+}
+.carousel-slide::after{
+  content:'';position:absolute;bottom:-40px;left:30%;
+  width:140px;height:140px;
+  border-radius:50%;
+  background:rgba(255,255,255,.04);
+}
+.slide-text{z-index:1}
+.slide-text .eyebrow{
+  font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.65);margin-bottom:8px;
+}
+.slide-text h2{
+  font-size:clamp(1.5rem,5vw,2.2rem);font-weight:900;color:#fff;
+  line-height:1.1;margin-bottom:12px;
+}
+.slide-text h2 span{color:#FFD700}
+.slide-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:#fff;color:var(--purple);
+  border:none;border-radius:999px;
+  padding:10px 20px;font-family:'Nunito',sans-serif;
+  font-weight:800;font-size:.82rem;cursor:pointer;
+  box-shadow:0 4px 16px rgba(0,0,0,.2);
+  transition:transform .2s;text-decoration:none;
+}
+.slide-btn:hover{transform:scale(1.04)}
+.slide-img{width:120px;flex-shrink:0;z-index:1}
+.slide-img img{width:100%;display:block;filter:drop-shadow(0 8px 24px rgba(0,0,0,.3))}
+.carousel-dots{
+  display:flex;justify-content:center;gap:7px;
+  padding:12px 0;background:var(--white);
+}
+.dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--border);cursor:pointer;
+  transition:background .2s,transform .2s;
+}
+.dot.active{background:var(--purple);transform:scale(1.3)}
+
+/* ── SECTION HEADER ── */
+.sec-head{
+  width:100%;
+  max-width:1090px;
+  margin:0 auto 16px;
+  padding:24px 14px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.sec-head h3{
+  font-size:1.1rem;
+  font-weight:900;
+  color:var(--text);
+}
+
+.sec-head a{
+  font-size:.78rem;
+  font-weight:700;
+  color:var(--purple);
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:3px;
+}
+
+/* ── BADGES STRIP ── */
+.badges-strip{
+  width:100%;
+  max-width:1090px;
+  margin:0 auto;
+  padding:0 14px 16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:8px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+
+.badges-strip::-webkit-scrollbar{
+  display:none;
+}
+.strip-badge{
+  flex-shrink:0;
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:999px;padding:6px 14px;
+  font-size:.72rem;font-weight:700;
+  display:flex;align-items:center;gap:6px;color:var(--text2);
+  white-space:nowrap;
+  box-shadow:0 2px 8px rgba(123,0,224,.07);
+}
+.strip-badge .dot2{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green)}
+
+/* ── PRODUCT GRID ── */
+.prod-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  padding:0 14px;
+  max-width:1090px;
+  margin:0 auto;
+}
+/* ── PRODUCT CARD ── */
+.pcard{
+  background:var(--card);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 2px 12px rgba(123,0,224,.08);
+  border:1px solid var(--border);
+  display:flex;flex-direction:column;
+  transition:transform .22s,box-shadow .22s;
+  cursor:pointer;position:relative;
+}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(123,0,224,.16)}
+.pcard.featured{border-color:var(--purple);box-shadow:0 4px 20px rgba(123,0,224,.2)}
+
+.pcard-img{
+  background:var(--bg2);
+  width:100%;
+  aspect-ratio:4/3;
+  position:relative;overflow:hidden;
+}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.pcard:hover .pcard-img img{transform:scale(1.04)}
+
+.pcard-actions{
+  position:absolute;top:10px;right:10px;
+  display:flex;flex-direction:column;gap:7px;z-index:2;
+}
+.pcard-icon{
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--border);cursor:pointer;
+  font-size:.9rem;transition:background .2s,transform .2s;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+.pcard-icon:hover{background:#fff;transform:scale(1.1)}
+.pcard-icon.active{background:var(--purple);color:#fff;border-color:var(--purple)}
+
+
+.pill-hot{
+  position:absolute;top:10px;left:10px;z-index:2;
+  background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;
+  border-radius:999px;padding:3px 10px;
+  font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+}
+.pill-new{
+  position:absolute;top:10px;left:10px;z-index:2;
+  background:var(--orange);color:#fff;
+  border-radius:999px;padding:3px 10px;
+  font-size:.62rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+}
+
+.pcard-body{padding:12px 12px 14px;flex:1;display:flex;flex-direction:column;gap:6px}
+.pcard-stars{display:flex;align-items:center;gap:4px;font-size:.72rem;color:var(--muted)}
+.pcard-stars span{color:#FFB300;font-size:.75rem}
+.pcard-name{font-size:.82rem;font-weight:800;color:var(--text);line-height:1.3}
+.pcard-price{
+  font-size:1.05rem;font-weight:900;
+  background:linear-gradient(135deg,var(--purple),var(--blue));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.pcard-price-free{
+  font-size:1rem;font-weight:900;color:var(--green);
+}
+.pcard-btns{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.btn-add{
+  background:linear-gradient(135deg,var(--purple),var(--blue));
+  color:#fff;border:none;border-radius:10px;
+  padding:9px 10px;font-family:'Nunito',sans-serif;
+  font-weight:800;font-size:.72rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  transition:all .2s;width:100%;
+}
+.btn-add:hover{filter:brightness(1.1);transform:translateY(-1px);box-shadow:0 6px 18px rgba(123,0,224,.3)}
+.btn-mp{
+  background:#009EE3;
+  color:#fff;border:none;border-radius:10px;
+  padding:9px 10px;font-family:'Nunito',sans-serif;
+  font-weight:800;font-size:.72rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  transition:all .2s;width:100%;text-decoration:none;
+}
+.btn-mp:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.btn-wa{
+  background:transparent;color:#25D366;
+  border:1.5px solid rgba(37,211,102,.4);
+  border-radius:10px;padding:8px 10px;
+  font-family:'Nunito',sans-serif;font-weight:700;font-size:.7rem;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;
+  transition:all .2s;width:100%;text-decoration:none;
+}
+.btn-wa:hover{background:rgba(37,211,102,.08);border-color:#25D366}
+
+/* ── PROMO BANNER ── */
+.promo-banner{
+  margin:20px 14px;border-radius:20px;overflow:hidden;
+  background:linear-gradient(135deg,var(--purple3),var(--purple),var(--blue));
+  padding:24px 20px;display:flex;align-items:center;justify-content:space-between;
+  gap:12px;box-shadow:0 8px 28px rgba(123,0,224,.25);position:relative;
+}
+.promo-banner::after{
+  content:'';position:absolute;top:-30px;right:-30px;
+  width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.07);
+}
+.promo-left{z-index:1}
+.promo-left p{font-size:.7rem;font-weight:700;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.promo-left h4{font-size:1.3rem;font-weight:900;color:#fff;line-height:1.2;margin-bottom:14px}
+.promo-left h4 span{color:#FFD700}
+.promo-cta{
+  display:inline-flex;align-items:center;gap:6px;
+  background:#fff;color:var(--purple);border:none;border-radius:999px;
+  padding:10px 20px;font-family:'Nunito',sans-serif;
+  font-weight:800;font-size:.8rem;cursor:pointer;
+  text-decoration:none;transition:transform .2s;
+  box-shadow:0 4px 14px rgba(0,0,0,.2);
+}
+.promo-cta:hover{transform:scale(1.04)}
+.promo-img{width:90px;flex-shrink:0;z-index:1}
+.promo-img img{width:100%;display:block;filter:drop-shadow(0 6px 18px rgba(0,0,0,.3))}
+
+/* ── PROOF BAR ── */
+.proof-bar{
+  margin:0 14px 20px;
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:18px;padding:18px 20px;
+  text-align:center;
+  box-shadow:0 2px 12px rgba(123,0,224,.07);
+}
+.proof-bar .stars{font-size:1.1rem;letter-spacing:2px;margin-bottom:6px}
+.proof-num{
+  font-size:2rem;font-weight:900;
+  background:linear-gradient(135deg,var(--purple),var(--blue));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.proof-bar p{font-size:.75rem;color:var(--muted);margin-top:4px;font-weight:600}
+
+/* ── HOW IT WORKS ── */
+.how-section{
+  width:100%;
+  max-width:1090px;
+  margin:0 auto 30px;
+  padding:8px 14px 24px;
+}
+.how-steps{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  max-width:700px;
+  margin:0 auto;
+}
+.how-step{display:flex;gap:16px;align-items:flex-start;position:relative}
+.how-step:not(:last-child)::after{content:'';position:absolute;left:17px;top:40px;width:2px;height:calc(100% - 16px);background:linear-gradient(to bottom,var(--purple),transparent)}
+.how-num{
+  flex:0 0 36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,var(--purple),var(--blue));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:.9rem;color:#fff;
+  box-shadow:0 4px 14px rgba(123,0,224,.3);flex-shrink:0;
+}
+.how-body{padding:6px 0 32px}
+.how-body strong{display:block;font-size:.9rem;font-weight:800;color:var(--text);margin-bottom:3px}
+.how-body span{font-size:.78rem;color:var(--muted);line-height:1.5}
+
+/* ── GUARANTEE ── */
+.guarantee-box{
+  margin:0 14px 24px;
+  background:linear-gradient(135deg,rgba(123,0,224,.06),rgba(61,90,255,.06));
+  border:1.5px solid rgba(123,0,224,.15);
+  border-radius:20px;padding:24px 20px;text-align:center;
+}
+.guarantee-box .ico{font-size:2.4rem;margin-bottom:10px}
+.guarantee-box h3{font-size:1rem;font-weight:900;color:var(--text);margin-bottom:8px}
+.guarantee-box p{font-size:.78rem;color:var(--muted);line-height:1.6}
+
+/* ── TESTIMONIALS ── */
+.testi-section{
+  background:var(--white);
+  padding:28px 0;
+  margin-bottom:20px;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  overflow:hidden;
+}
+
+.testi-section h3{
+  width:100%;
+  max-width:1090px;
+  margin:0 auto 18px;
+  padding:0 14px;
+  font-size:1.1rem;
+  font-weight:900;
+  color:var(--text);
+}
+
+.testi-track{
+  display:flex;
+  gap:18px;
+  width:max-content;
+  padding:0 18px 10px;
+  animation:testiScroll 140s linear infinite;
+}
+
+.testi-track:hover{
+  animation-play-state:paused;
+}
+
+.testi-card{
+  flex:0 0 auto;
+  width:500px;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 6px 18px rgba(123,0,224,.10);
+}
+
+.testi-card img{
+  width:100%;
+  display:block;
+}
+
+@keyframes testiScroll{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+@media (max-width:768px){
+  .testi-card{
+    width:260px;
+  }
+
+  .testi-track{
+    gap:12px;
+    animation-duration:38s;
+  }
+}
+
+/* ── PAYMENT BADGES ── */
+.pay-section{padding:16px 18px 24px;text-align:center}
+.pay-label{font-size:.7rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.pay-row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
+.pay-chip{
+  background:var(--white);border:1.5px solid var(--border);
+  border-radius:10px;padding:7px 14px;
+  font-size:.72rem;font-weight:800;color:var(--text2);
+  display:flex;align-items:center;gap:5px;
+  box-shadow:0 2px 6px rgba(123,0,224,.06);
+}
+
+/* ── FOOTER ── */
+footer{background:var(--white);border-top:1px solid var(--border);padding:28px 18px;text-align:center}
+footer img{max-width:140px;margin:0 auto 14px;display:block;opacity:.7}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.75rem;font-weight:700;transition:color .2s}
+.footer-links a:hover{color:var(--purple)}
+footer p{font-size:.68rem;color:var(--muted)}
+
+/* ── BOTTOM NAV ── */
+.bottom-nav{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:var(--white);border-top:1px solid var(--border);
+  height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-around;
+  box-shadow:0 -4px 20px rgba(123,0,224,.08);
+  padding:0 8px;
+}
+.nav-item{
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  cursor:pointer;padding:8px 12px;border-radius:12px;
+  transition:background .2s;border:none;background:none;
+  font-family:'Nunito',sans-serif;
+}
+.nav-item:hover{background:rgba(123,0,224,.07)}
+.nav-item.active .nav-icon{color:var(--purple)}
+.nav-item.active .nav-label{color:var(--purple)}
+.nav-icon{font-size:1.3rem;color:var(--muted)}
+.nav-label{font-size:.6rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+
+/* ── CART DRAWER ── */
+.overlay{position:fixed;inset:0;background:rgba(10,0,30,.5);z-index:400;opacity:0;pointer-events:none;transition:opacity .3s}
+.overlay.open{opacity:1;pointer-events:all}
+.drawer{position:fixed;top:0;right:-420px;width:min(400px,100vw);height:100%;background:var(--white);z-index:500;display:flex;flex-direction:column;transition:right .35s cubic-bezier(.4,0,.2,1);box-shadow:-8px 0 40px rgba(0,0,0,.15)}
+.drawer.open{right:0}
+.drawer-head{padding:18px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.drawer-head h3{font-size:1rem;font-weight:900;color:var(--text)}
+.drawer-close{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.5rem;line-height:1}
+.drawer-items{flex:1;overflow-y:auto;padding:16px}
+.drawer-empty{text-align:center;color:var(--muted);padding:52px 20px;font-size:.88rem;font-weight:600}
+.cart-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border)}
+.cart-item img{width:60px;height:60px;object-fit:cover;border-radius:12px;flex-shrink:0;border:1px solid var(--border)}
+.ci-info{flex:1}
+.ci-name{font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.3}
+.ci-price{font-size:.88rem;font-weight:900;background:linear-gradient(135deg,var(--purple),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ci-remove{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1rem;padding:2px;transition:color .2s}
+.ci-remove:hover{color:var(--red)}
+.drawer-foot{padding:16px 20px;border-top:1px solid var(--border)}
+.drawer-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.drawer-total span{font-size:.85rem;font-weight:700;color:var(--text2)}
+.drawer-total strong{font-size:1.2rem;font-weight:900;background:linear-gradient(135deg,var(--purple),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.btn-checkout{
+  width:100%;background:linear-gradient(135deg,var(--purple),var(--blue));
+  border:none;border-radius:14px;padding:15px;color:#fff;
+  font-family:'Nunito',sans-serif;font-weight:900;font-size:.9rem;
+  cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:all .2s;box-shadow:0 4px 18px rgba(123,0,224,.3);
+}
+.btn-checkout:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn-checkout:disabled{opacity:.45;cursor:not-allowed;transform:none}
+
+/* ── SALE NOTIFICATION ── */
+.sale-notif{
+  position:fixed;bottom:calc(var(--nav-h) + 14px);left:14px;z-index:9998;
+  background:#fff;border-radius:16px;
+  padding:12px 14px;display:flex;align-items:center;gap:12px;
+  box-shadow:0 8px 32px rgba(0,0,0,.18),0 2px 8px rgba(123,0,224,.12);
+  max-width:280px;border:1px solid var(--border);
+  transform:translateX(-320px);opacity:0;
+  transition:transform .5s cubic-bezier(.34,1.3,.64,1),opacity .5s;
+  pointer-events:none;
+}
+.sale-notif.show{transform:translateX(0);opacity:1}
+.sale-notif.hide{transform:translateX(-320px);opacity:0}
+.sn-icon{width:44px;height:44px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.85rem;color:#fff;letter-spacing:-.5px;font-family:'Nunito',sans-serif}
+.sn-body{flex:1;min-width:0}
+.sn-name{font-size:.76rem;font-weight:800;color:var(--text);line-height:1.3;margin-bottom:2px}
+.sn-action{font-size:.7rem;color:var(--muted);font-weight:600}
+.sn-time{font-size:.63rem;color:var(--muted);margin-top:3px;display:flex;align-items:center;gap:4px}
+.sn-time::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:calc(var(--nav-h)+80px);left:50%;
+  transform:translateX(-50%) translateY(30px);
+  background:linear-gradient(135deg,var(--purple),var(--blue));
+  color:#fff;padding:11px 24px;border-radius:999px;
+  font-weight:800;font-size:.82rem;
+  z-index:9999;white-space:nowrap;
+  opacity:0;transition:transform .4s cubic-bezier(.34,1.56,.64,1),opacity .4s;
+  pointer-events:none;box-shadow:0 4px 18px rgba(123,0,224,.35);
+}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .45s ease,transform .45s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:360px){.prod-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<!-- Banner de redirecionamento (visível só se o usuário notar que está no github) -->
+<div style="background:#1a0035;color:rgba(255,255,255,.5);text-align:center;padding:5px;font-size:.65rem;font-family:monospace;letter-spacing:.05em">
+  Espelho oficial · <a href="https://ronaldotenorio.com/arsenalrt3" style="color:#9B30FF;text-decoration:none;">ronaldotenorio.com/arsenalrt3</a>
+</div>
+<div class="ticker">⚡ Entrega Rápida &nbsp;·&nbsp; +2.000 designers satisfeitos &nbsp;·&nbsp; 100% Livre de Vírus &nbsp;·&nbsp; Tutorial Incluso</div>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <img src="https://ronaldotenorio.com/arsenalrt3/img/Logo_FerramentasParaDesigners.png" alt="Arsenal RT" style="height:34px">
+  <button class="cart-pill" onclick="toggleCart()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/></svg>
+    Carrinho
+    <span class="cart-bubble" id="cart-count">0</span>
+  </button>
+</header>
+
+<!-- HERO CAROUSEL -->
+<div class="carousel">
+  <div class="carousel-track" id="carousel-track">
+    <div class="carousel-slide">
+      <div class="slide-text">
+        <div class="eyebrow">Arsenal RT</div>
+        <h2>Ferramentas<br>prontas pra <span>criar</span></h2>
+        <a href="#produtos" class="slide-btn">Ver tudo →</a>
+      </div>
+      <div class="slide-img">
+        <img src="https://ronaldotenorio.com/arsenalrt3/img/Logo_FerramentasParaDesigners.png" alt="">
+      </div>
+    </div>
+    <div class="carousel-slide" style="background:linear-gradient(135deg,#0D0060,#3D00C8,#004FFF)">
+      <div class="slide-text">
+        <div class="eyebrow">100% Testado</div>
+        <h2>Tutorial em<br>vídeo <span>incluso</span></h2>
+        <a href="#produtos" class="slide-btn">Escolher →</a>
+      </div>
+      <div class="slide-img">
+        <img src="https://ronaldotenorio.com/arsenalrt3/img/Logo_FerramentasParaDesigners.png" alt="">
+      </div>
+    </div>
+    <div class="carousel-slide" style="background:linear-gradient(135deg,#004020,#007A40,#00C853)">
+      <div class="slide-text">
+        <div class="eyebrow">Entrega via WhatsApp</div>
+        <h2>Software +<br>Licença <span>ativa</span></h2>
+        <a href="#produtos" class="slide-btn">Comprar →</a>
+      </div>
+      <div class="slide-img">
+        <img src="https://ronaldotenorio.com/arsenalrt3/img/Logo_FerramentasParaDesigners.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="carousel-dots" id="carousel-dots">
+    <div class="dot active" onclick="goSlide(0)"></div>
+    <div class="dot" onclick="goSlide(1)"></div>
+    <div class="dot" onclick="goSlide(2)"></div>
+  </div>
+</div>
+
+<!-- PROOF BAR -->
+<div class="proof-bar reveal" style="margin-top:16px">
+  <div class="stars">⭐⭐⭐⭐⭐</div>
+  <div class="proof-num">+2.000</div>
+  <p>criativos satisfeitos</p>
+</div>
+
+<!-- BADGES STRIP -->
+<div class="badges-strip">
+  <div class="strip-badge"><span class="dot2"></span> Entrega Rápida</div>
+  <div class="strip-badge"><span class="dot2"></span> Livre de Vírus</div>
+  <div class="strip-badge"><span class="dot2"></span> Tutorial incluso</div>
+  <div class="strip-badge"><span class="dot2"></span> Suporte direto</div>
+  <div class="strip-badge"><span class="dot2"></span> Licença ativa</div>
+</div>
+
+<!-- BANNER PRINCIPAL -->
+<div style="padding:0 14px 20px" class="reveal">
+  <img
+    src="https://ronaldotenorio.com/arsenalrt3/img/banner/banner_adobephotoshopbaixar_ativar_como_download.jpg"
+    alt="Banner Adobe Photoshop"
+    style="
+      width:100%;
+      max-width:1090px;
+      height:auto;
+      display:block;
+      margin:0 auto;
+      border-radius:20px;
+      box-shadow:0 6px 24px rgba(123,0,224,.15);
+    "
+  >
+</div>
+
+<!-- PRODUCTS SECTION -->
+<div id="produtos">
+  <div class="sec-head reveal">
+    <h3>🔥 Mais Vendidos</h3>
+    <a href="#todos">Ver todos ›</a>
+  </div>
+  <div class="prod-grid" id="grid-top"></div>
+
+  <!-- PROMO BANNER -->
+  <div class="promo-banner reveal">
+    <div class="promo-left">
+      <p>Ferramenta do mês</p>
+      <h4>Software +<br>Tutorial + <span>Licença</span></h4>
+      <a href="#todos" class="promo-cta">Ver agora →</a>
+    </div>
+    <div class="promo-img">
+      <img src="https://ronaldotenorio.com/arsenalrt3/img/Logo_FerramentasParaDesigners.png" alt="">
+    </div>
+  </div>
+
+  <div id="todos">
+    <div class="sec-head reveal">
+      <h3>Todas as Ferramentas</h3>
+    </div>
+    <div class="prod-grid" id="grid-all"></div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="sec-head reveal" style="padding-top:28px;justify-content:center;">
+  <h3>Como Funciona?</h3>
+</div>
+<div class="how-section reveal">
+  <div class="how-steps">
+    <div class="how-step"><div class="how-num">1</div><div class="how-body"><strong>Escolha a ferramenta</strong><span>Clique em "Adicionar ao carrinho" ou compre direto pelo Mercado Pago.</span></div></div>
+    <div class="how-step"><div class="how-num">2</div><div class="how-body"><strong>Faça o pagamento</strong><span>PIX, cartão de crédito ou boleto — você escolhe como pagar.</span></div></div>
+    <div class="how-step"><div class="how-num">3</div><div class="how-body"><strong>Envie o comprovante</strong><span>Mande o comprovante pelo WhatsApp direto pro Ronaldo.</span></div></div>
+    <div class="how-step"><div class="how-num">4</div><div class="how-body"><strong>Receba o link + tutorial</strong><span>Em minutos você recebe o download e o tutorial em vídeo. Pronto!</span></div></div>
+  </div>
+</div>
+
+<!-- GUARANTEE -->
+<div class="guarantee-box reveal">
+  <div class="ico">🛡️</div>
+  <h3>100% Testado & Seguro</h3>
+  <p>Todos os softwares são testados antes de chegar até você. Sem vírus, sem sustos. Se tiver qualquer problema na instalação, o Ronaldo te ajuda pelo WhatsApp.</p>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testi-section">
+  <h3>O que dizem nossos clientes ⭐</h3>
+  <div class="testi-track" id="testi-track"></div>
+</div>
+
+<!-- PAYMENT -->
+<div class="pay-section reveal">
+  <div class="pay-label">Formas de pagamento</div>
+  <div class="pay-row">
+    <div class="pay-chip">🔵 PIX</div>
+    <div class="pay-chip">💳 Crédito</div>
+    <div class="pay-chip">💳 Débito</div>
+    <div class="pay-chip">📄 Boleto</div>
+    <div class="pay-chip">🟡 Mercado Pago</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://ronaldotenorio.com/arsenalrt3/img/Logo_FerramentasParaDesigners.png" alt="Arsenal RT">
+  <div class="footer-links">
+    <a href="https://www.instagram.com/rtjobs/" target="_blank">Instagram</a>
+    <a href="https://www.youtube.com/watch?v=U8sAiprBOQQ&t=2s" target="_blank">YouTube</a>
+    <a href="https://ronaldotenorio.com/arsenalrt3" target="_blank">Site</a>
+    <a href="https://api.whatsapp.com/send?phone=5582996783383" target="_blank">WhatsApp</a>
+  </div>
+  <p>© 2026&nbsp; &nbsp; Ferramentas para Designers</p>
+</footer>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <button class="nav-item active" onclick="scrollTop()">
+    <span class="nav-icon">🏠</span>
+    <span class="nav-label">Início</span>
+  </button>
+  
+  <button class="nav-item" onclick="toggleCart()">
+    <span class="nav-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.99 1.61h9.72a2 2 0 001.99-1.61L23 6H6"/></svg></span>
+    <span class="nav-label">Carrinho</span>
+  </button>
+  <button class="nav-item" onclick="window.open('https://api.whatsapp.com/send?phone=5582996783383','_blank')">
+    <span class="nav-icon">💬</span>
+    <span class="nav-label">Suporte</span>
+  </button>
+</nav>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>🛒 Meu Carrinho</h3>
+    <button class="drawer-close" onclick="toggleCart()">×</button>
+  </div>
+  <div class="drawer-items" id="drawer-items">
+    <div class="drawer-empty" id="empty-msg">Seu carrinho está vazio</div>
+  </div>
+  <div class="drawer-foot">
+    <div class="drawer-total">
+      <span>Total</span>
+      <strong id="cart-total">R$ 0,00</strong>
+    </div>
+    <button class="btn-checkout" id="btn-checkout" onclick="checkout()" disabled>
+      💳 Finalizar — Mercado Pago
+    </button>
+  </div>
+</div>
+
+<!-- SALE NOTIFICATION -->
+<div class="sale-notif" id="sale-notif">
+  <div class="sn-icon" id="sn-icon"></div>
+  <div class="sn-body">
+    <div class="sn-name" id="sn-name"></div>
+    <div class="sn-action" id="sn-action"></div>
+    <div class="sn-time" id="sn-time"></div>
+  </div>
+</div>
+
+<!-- PIX MODAL -->
+<div class="overlay" id="pix-overlay" onclick="closePix()" style="z-index:600"></div>
+<div id="pix-modal" style="position:fixed;bottom:-600px;left:0;right:0;z-index:700;background:#fff;border-radius:28px 28px 0 0;padding:28px 22px 36px;box-shadow:0 -8px 40px rgba(123,0,224,.2);transition:bottom .4s cubic-bezier(.4,0,.2,1);max-width:480px;margin:0 auto;">
+  <div style="width:40px;height:4px;border-radius:2px;background:var(--border);margin:0 auto 22px;"></div>
+  <h3 style="font-size:1.1rem;font-weight:900;color:var(--text);margin-bottom:6px;text-align:center">✅ Quase lá!</h3>
+  <p style="font-size:.78rem;color:var(--muted);text-align:center;margin-bottom:20px;line-height:1.6">Copie a chave Pix abaixo, faça o pagamento e depois envie o comprovante pelo WhatsApp.</p>
+  <div style="background:var(--bg2);border:1.5px solid var(--border);border-radius:14px;padding:14px 16px;margin-bottom:14px">
+    <div style="font-size:.65rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">Total a pagar</div>
+    <div id="pix-total" style="font-size:1.6rem;font-weight:900;background:linear-gradient(135deg,var(--purple),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"></div>
+  </div>
+  <div style="background:var(--bg2);border:1.5px dashed var(--purple);border-radius:14px;padding:14px 16px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between;gap:10px">
+    <div>
+      <div style="font-size:.65rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px">Chave Pix (e-mail)</div>
+      <div style="font-size:.88rem;font-weight:800;color:var(--text)">mercadopago@ronaldotenorio.com</div>
+    </div>
+    <button onclick="copyPix()" id="copy-btn" style="background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;border:none;border-radius:10px;padding:10px 16px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.75rem;cursor:pointer;white-space:nowrap;flex-shrink:0;">📋 Copiar</button>
+  </div>
+  <p style="font-size:.68rem;color:var(--muted);margin-bottom:20px;text-align:center">Banco: Mercado Pago — Ronaldo Tenorio</p>
+  <button onclick="_buyNowProduct ? goWhatsAppBuyNow() : goWhatsApp()" style="width:100%;background:#25D366;border:none;border-radius:14px;padding:15px;color:#fff;font-family:'Nunito',sans-serif;font-weight:900;font-size:.9rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 18px rgba(37,211,102,.35);">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Enviar Comprovante pelo WhatsApp
+  </button>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+/* ─── PRODUCTS DATA ─── */
+const BASE = "img/";
+const WA   = "https://api.whatsapp.com/send?phone=5582996783383&text=Segue%20comprovante%20da%20ferramenta";
+const PIX_KEY = "mercadopago@ronaldotenorio.com";
+
+const PRODUCTS = [
+  { id:1,  name:"Adobe Illustrator 2025", price:24.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_06.jpg", pill:"hot",  top:true,  mp:"SEU_LINK_MP_01" },
+  { id:2,  name:"Adobe Photoshop 2025", price:24.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_11.jpg", pill:null,  top:true,  mp:"SEU_LINK_MP_02" },
+  { id:3,  name:"Corel Draw 2024", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_14.jpg", pill:null,  top:true,  mp:"SEU_LINK_MP_03" },
+  { id:4,  name:"Adobe Photoshop 2026", price:29.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_AdobeIllustrator2026_20.jpg", pill:null,  top:true,  mp:"SEU_LINK_MP_04" },
+  { id:5,  name:"Adobe Acrobat Pro 2023", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_01.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_05" },
+  { id:6,  name:"Adobe After Effects 2023", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_02.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_06" },
+  { id:7,  name:"Adobe Animate 2024", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_03.jpg", pill:"new", top:false, mp:"SEU_LINK_MP_07" },
+  { id:8,  name:"Adobe Audition 2023", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_04.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_08" },
+  { id:9,  name:"Adobe Illustrator 2024", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_05.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_09" },
+  { id:10, name:"Adobe Illustrator 2025", price:24.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_06.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_10" },
+  { id:11, name:"Adobe InDesign 2023", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_07.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_11" },
+  { id:12, name:"Adobe Lightroom 2023", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_08.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_12" },
+  { id:13, name:"Adobe Media Encoder 2023", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_09.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_13" },
+  { id:14, name:"Adobe Photoshop 2024", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_10.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_14" },
+  { id:15, name:"Adobe Photoshop 2025", price:24.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_11.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_15" },
+  { id:16, name:"Adobe Photoshop 2026", price:29.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_AdobeIllustrator2026_20.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_15" },
+  { id:17, name:"Adobe Premiere Pro 2024", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_12.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_16" },
+  { id:18, name:"Adobe Premiere Pro 2026", price:29.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_AdobeIllustrator2026_19.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_16" },
+  { id:19, name:"Corel Draw 2025", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_AdobeIllustrator2026_21.jpg", pill:null,  top:false, mp:"SEU_LINK_MP_18" },
+  { id:20, name:"Maxon Cinema 4D R26", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_15.jpg", pill:"null", top:false, mp:"SEU_LINK_MP_19"},
+  { id:21, name:"Pacote Microsoft Office", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_16.jpg", pill:null, top:false, mp:"SEU_LINK_MP_20" },
+  { id:22, name:"SketchUp Pro 2023", price:19.90, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_17.jpg", pill:null, top:false, mp:"SEU_LINK_MP_20" },
+  { id:23, name:"Bloqueador de Aviso", price:0, img:"Capas_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_18.jpg", pill:"free", top:false, mp:"https://drive.google.com/drive/folders/18yfHNop-FMmDDw_3F8UePKportbO10TL?usp=drive_link", free:true }
+	
+];
+
+/* ─── RENDER CARD ─── */
+function cardHTML(p) {
+  const pillMap = {
+  hot:'<div class="pill-hot">⭐ Top</div>'
+};
+
+const pill = pillMap[p.pill] || '';
+const priceHTML = p.free
+  ? '<div class="pcard-price-free">GRÁTIS</div>'
+  : `<div class="pcard-price">R$ ${p.price.toFixed(2).replace(".", ",")}</div>`;
+  const btnsHTML = p.free
+    ? `<a class="btn-add" href="${p.mp}" target="_blank">⬇️ Baixar Grátis</a>`
+    : `<button class="btn-add" onclick="addToCart(${p.id},event)">🛒 Adicionar</button>
+       <button class="btn-wa" onclick="buyNow(${p.id},event)">Comprar</button>`;
+  return `
+    <div class="pcard${p.pill==='hot'?' featured':''} reveal">
+      <div class="pcard-img">
+        ${pill}
+        <img src="https://ronaldotenorio.com/arsenalrt3/${BASE}${p.img}" alt="${p.name}" loading="lazy">
+        <div class="pcard-actions">
+          <div class="pcard-icon" title="Favoritar">
+  <img src="https://ronaldotenorio.com/arsenalrt3/img/icon_favorito.png" alt="Favorito" style="width:18px;height:18px;">
+</div>
+          <div class="pcard-icon" title="Carrinho" onclick="addToCart(${p.id},event)">
+  <img src="https://ronaldotenorio.com/arsenalrt3/img/icon_compras.png" alt="Carrinho" style="width:18px;height:18px;">
+</div>
+        </div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-stars"><span>★★★★★</span></div>
+        <div class="pcard-name">${p.name}</div>
+        ${priceHTML}
+        <div class="pcard-btns">${btnsHTML}</div>
+      </div>
+    </div>`;
+}
+
+/* ─── POPULATE GRIDS ─── */
+const gridTop = document.getElementById('grid-top');
+const gridAll = document.getElementById('grid-all');
+PRODUCTS.forEach(p => {
+  if(p.top) gridTop.innerHTML += cardHTML(p);
+  else       gridAll.innerHTML += cardHTML(p);
+});
+
+/* ─── TESTIMONIALS ─── */
+const track = document.getElementById('testi-track');
+
+for(let i=1;i<=20;i++){
+  track.innerHTML += `<div class="testi-card"><img src="https://ronaldotenorio.com/arsenalrt3/${BASE}Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_${i}.jpg" alt="" loading="lazy"></div>`;
+}
+
+for(let i=1;i<=20;i++){
+  track.innerHTML += `<div class="testi-card"><img src="https://ronaldotenorio.com/arsenalrt3/${BASE}Comentários_FerramentasDesign_Photoshop_Illustrator_Corel_BaixarGratis_${i}.jpg" alt="" loading="lazy"></div>`;
+}
+
+/* ─── CAROUSEL ─── */
+let slide = 0;
+const track2 = document.getElementById('carousel-track');
+const dots = document.querySelectorAll('.dot');
+function goSlide(n) {
+  slide = n;
+  track2.style.transform = `translateX(-${n*100}%)`;
+  dots.forEach((d,i) => d.classList.toggle('active', i===n));
+}
+setInterval(() => goSlide((slide+1) % 3), 4500);
+
+/* ─── CART ─── */
+let cart = [];
+function addToCart(id, e) {
+  if(e) e.stopPropagation();
+  const p = PRODUCTS.find(x=>x.id===id);
+  if(!p||p.free) return;
+  const ex = cart.find(x=>x.id===id);
+  if(ex) ex.qty++; else cart.push({...p, qty:1});
+  renderCart(); openCart();
+  showToast(`✅ "${p.name}" adicionado!`);
+}
+function removeFromCart(id){ cart=cart.filter(x=>x.id!==id); renderCart(); }
+function renderCart(){
+  const count = cart.reduce((s,x)=>s+x.qty,0);
+  const total = cart.reduce((s,x)=>s+(x.price*x.qty),0);
+  document.getElementById('cart-count').textContent = count;
+  document.getElementById('cart-total').textContent = `R$ ${total.toFixed(2).replace('.',',')}`;
+  document.getElementById('btn-checkout').disabled = cart.length===0;
+  const container = document.getElementById('drawer-items');
+  const empty = document.getElementById('empty-msg');
+  empty.style.display = cart.length ? 'none' : 'block';
+  container.querySelectorAll('.cart-item').forEach(e=>e.remove());
+  cart.forEach(item => {
+    const el = document.createElement('div');
+    el.className='cart-item';
+    el.innerHTML=`<img src="https://ronaldotenorio.com/arsenalrt3/${BASE}${item.img}" alt="${item.name}">
+      <div class="ci-info"><div class="ci-name">${item.name}${item.qty>1?` ×${item.qty}`:''}</div>
+      <div class="ci-price">R$ ${(item.price*item.qty).toFixed(2).replace('.',',')}</div></div>
+      <button class="ci-remove" onclick="removeFromCart(${item.id})">✕</button>`;
+    container.appendChild(el);
+  });
+}
+function openCart(){ document.getElementById('drawer').classList.add('open'); document.getElementById('overlay').classList.add('open'); }
+function toggleCart(){ document.getElementById('drawer').classList.toggle('open'); document.getElementById('overlay').classList.toggle('open'); }
+function checkout(){
+  if(!cart.length) return;
+  _buyNowProduct = null;
+  const total = cart.reduce((s,x)=>s+(x.price*x.qty),0);
+  document.getElementById('pix-total').textContent = `R$ ${total.toFixed(2).replace('.',',')}`;
+  document.getElementById('pix-overlay').classList.add('open');
+  document.getElementById('pix-modal').style.bottom = '0';
+}
+function closePix(){
+  _buyNowProduct = null;
+  document.getElementById('pix-overlay').classList.remove('open');
+  document.getElementById('pix-modal').style.bottom = '-600px';
+}
+function copyPix(){
+  const btn = document.getElementById('copy-btn');
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(PIX_KEY).then(()=>{
+      btn.textContent='✅ Copiado!';
+      setTimeout(()=>btn.textContent='📋 Copiar',2500);
+    });
+  } else {
+    const el=document.createElement('textarea');
+    el.value=PIX_KEY; document.body.appendChild(el);
+    el.select(); document.execCommand('copy');
+    document.body.removeChild(el);
+    btn.textContent='✅ Copiado!';
+    setTimeout(()=>btn.textContent='📋 Copiar',2500);
+  }
+}
+function goWhatsApp(){
+  const items=cart.map(x=>`${x.name}${x.qty>1?` x${x.qty}`:''}`).join(', ');
+  const total=cart.reduce((s,x)=>s+(x.price*x.qty),0);
+  const msg=encodeURIComponent(`Olá! Quero comprar:\n${items}\n\nTotal: R$ ${total.toFixed(2).replace('.',',')}\n\nSegue comprovante do pagamento via Pix.`);
+  window.open(`https://api.whatsapp.com/send?phone=5582996783383&text=${msg}`,'_blank');
+}
+
+// Compra individual — abre o modal Pix com dados do produto específico
+let _buyNowProduct = null;
+function buyNow(id, e){
+  if(e) e.stopPropagation();
+  const p = PRODUCTS.find(x=>x.id===id);
+  if(!p) return;
+  _buyNowProduct = p;
+  document.getElementById('pix-total').textContent = `R$ ${p.price.toFixed(2).replace('.',',')}`;
+  document.getElementById('pix-overlay').classList.add('open');
+  document.getElementById('pix-modal').style.bottom = '0';
+}
+function goWhatsAppBuyNow(){
+  const p = _buyNowProduct;
+  if(!p) return;
+  const msg=encodeURIComponent(`Olá! Quero comprar:\n${p.name}\n\nTotal: R$ ${p.price.toFixed(2).replace('.',',')}\n\nSegue comprovante do pagamento via Pix.`);
+  window.open(`https://api.whatsapp.com/send?phone=5582996783383&text=${msg}`,'_blank');
+}
+
+/* ─── TOAST ─── */
+function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2600); }
+
+/* ─── SCROLL TOP ─── */
+function scrollTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
+
+/* ─── SALE NOTIFICATIONS ─── */
+const SALES=[
+  {name:"Tauan - Belo Horizonte/MG",  product:"Adobe Premiere Pro 2024",  icon:"Pr",color:"#9966FF"},
+  {name:"Camila - São Paulo/SP",       product:"Adobe Photoshop 2024",     icon:"Ps",color:"#31A8FF"},
+  {name:"Rafael - Curitiba/PR",        product:"CorelDRAW 2024",           icon:"Cd",color:"#00AE4D"},
+  {name:"Fernanda - Salvador/BA",      product:"Adobe Illustrator 2024",   icon:"Ai",color:"#FF9A00"},
+  {name:"Lucas - Fortaleza/CE",        product:"Microsoft Office 2024",    icon:"Of",color:"#D83B01"},
+  {name:"Mariana - Recife/PE",         product:"Adobe Photoshop 2025",     icon:"Ps",color:"#31A8FF"},
+  {name:"Diego - Porto Alegre/RS",     product:"Adobe After Effects 2023",      icon:"Ae",color:"#9999FF"},
+  {name:"Juliana - Manaus/AM",         product:"Adobe Illustrator 2025",   icon:"Ai",color:"#FF9A00"},
+  {name:"Pedro - Brasília/DF",         product:"CorelDRAW Suite",          icon:"Cd",color:"#00AE4D"},
+  {name:"Ana - Goiânia/GO",            product:"Adobe Premiere Pro 2025",  icon:"Pr",color:"#9966FF"},
+  {name:"Carlos - Belém/PA",           product:"Adobe Media Encoder",      icon:"Me",color:"#9966FF"},
+  {name:"Beatriz - Natal/RN",          product:"Microsoft Office 365",     icon:"Of",color:"#D83B01"},
+  {name:"Thiago - Maceió/AL",          product:"Adobe Photoshop 2024",     icon:"Ps",color:"#31A8FF"},
+  {name:"Larissa - Campo Grande/MS",   product:"Adobe Illustrator 2026",   icon:"Ai",color:"#FF9A00"},
+  {name:"Rodrigo - Florianópolis/SC",  product:"CorelDRAW 2025",           icon:"Cd",color:"#00AE4D"},
+  {name:"Patrícia - Vitória/ES",       product:"Adobe Premiere 2024",      icon:"Pr",color:"#9966FF"},
+  {name:"Eduardo - João Pessoa/PB",    product:"Adobe Photoshop 2026",     icon:"Ps",color:"#31A8FF"},
+  {name:"Vanessa - Teresina/PI",       product:"Microsoft Office 2016",    icon:"Of",color:"#D83B01"},
+  {name:"Gustavo - São Luís/MA",       product:"Adobe After Effects 2024", icon:"Ae",color:"#9966FF"},
+  {name:"Isabela - Aracaju/SE",        product:"CorelDRAW Suite",          icon:"Cd",color:"#00AE4D"},
+  {name:"Leandro - Vitória/ES",         product:"Adobe Photoshop 2025",      icon:"Ps",color:"#31A8FF"},
+  {name:"Saulo - Caxias do Sul/RS",     product:"Adobe Premiere Pro 2024",   icon:"Pr",color:"#9966FF"},
+  {name:"Bruno - Campinas/SP",          product:"CorelDRAW Graphics Suite",  icon:"Cd",color:"#00AE4D"},
+  {name:"Renata - Niterói/RJ",          product:"Adobe Illustrator 2025",    icon:"Ai",color:"#FF9A00"},
+  {name:"Felipe - Santos/SP",           product:"Adobe After Effects 2025",  icon:"Ae",color:"#9999FF"},
+  {name:"Tatiane - Londrina/PR",        product:"Microsoft Office 2024",     icon:"Of",color:"#D83B01"},
+  {name:"André - Joinville/SC",         product:"Adobe Photoshop 2024",      icon:"Ps",color:"#31A8FF"},
+  {name:"Priscila - Ribeirão Preto/SP", product:"Adobe Illustrator 2024",    icon:"Ai",color:"#FF9A00"},
+  {name:"Vinicius - Uberlândia/MG",     product:"CorelDRAW 2025",            icon:"Cd",color:"#00AE4D"},
+  {name:"Roberta - Sorocaba/SP",        product:"Adobe Premiere Pro 2025",   icon:"Pr",color:"#9966FF"},
+  {name:"Marcelo - Cuiabá/MT",          product:"Adobe After Effects 2024",  icon:"Ae",color:"#9999FF"},
+  {name:"Aline - Palmas/TO",            product:"Microsoft Office 365",      icon:"Of",color:"#D83B01"},
+  {name:"Henrique - Maringá/PR",        product:"Adobe Photoshop 2026",      icon:"Ps",color:"#31A8FF"},
+  {name:"Paula - Bauru/SP",             product:"Adobe Illustrator 2026",    icon:"Ai",color:"#FF9A00"},
+  {name:"Ricardo - Petrópolis/RJ",      product:"CorelDRAW Suite",           icon:"Cd",color:"#00AE4D"},
+  {name:"Débora - Blumenau/SC",         product:"Adobe Premiere Pro 2024",   icon:"Pr",color:"#9966FF"},
+  {name:"Fernando - Juiz de Fora/MG",   product:"Adobe Media Encoder",       icon:"Me",color:"#9966FF"},
+  {name:"Karina - Vila Velha/ES",       product:"Adobe Photoshop 2025",      icon:"Ps",color:"#31A8FF"},
+  {name:"Márcio - Anápolis/GO",         product:"Adobe After Effects 2023",  icon:"Ae",color:"#9999FF"},
+  {name:"Natália - Mossoró/RN",         product:"Microsoft Office 2016",     icon:"Of",color:"#D83B01"},
+  {name:"João - Caruaru/PE",            product:"Adobe Illustrator 2025",    icon:"Ai",color:"#FF9A00"},
+  {name:"Gabriela - Cabo Frio/RJ",      product:"Adobe Photoshop 2024",      icon:"Ps",color:"#31A8FF"},
+  {name:"Leonardo - São José/SC",       product:"CorelDRAW 2024",            icon:"Cd",color:"#00AE4D"},
+  {name:"Bianca - Piracicaba/SP",       product:"Adobe Premiere Pro 2025",   icon:"Pr",color:"#9966FF"},
+  {name:"Caio - Volta Redonda/RJ",      product:"Adobe After Effects 2025",  icon:"Ae",color:"#9999FF"},
+  {name:"Jéssica - Guarulhos/SP",       product:"Microsoft Office 2024",     icon:"Of",color:"#D83B01"},
+  {name:"Murilo - São José dos Campos/SP", product:"Adobe Photoshop 2025",   icon:"Ps",color:"#31A8FF"},
+  {name:"Camila - Florianópolis/SC",    product:"Adobe Illustrator 2024",    icon:"Ai",color:"#FF9A00"},
+  {name:"Rodrigo - Macapá/AP",          product:"CorelDRAW Suite",           icon:"Cd",color:"#00AE4D"},
+  {name:"Viviane - Boa Vista/RR",       product:"Adobe Premiere Pro 2024",   icon:"Pr",color:"#9966FF"}
+];
+const TIMES=["agora","há 1 min","há 2 min","há 3 min","há 5 min","há 8 min"];
+
+let ultimaVendaIndex = -1;
+
+function getVendaAleatoria(){
+  let index;
+
+  do {
+    index = Math.floor(Math.random() * SALES.length);
+  } while (index === ultimaVendaIndex && SALES.length > 1);
+
+  ultimaVendaIndex = index;
+  return SALES[index];
+}
+
+function showSale(){
+  const n=document.getElementById('sale-notif');
+  const s=getVendaAleatoria();
+
+  document.getElementById('sn-icon').innerHTML=`<div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,${s.color}cc,${s.color}66);display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-weight:900;font-size:.85rem;color:#fff">${s.icon}</div>`;
+  document.getElementById('sn-name').textContent=s.name;
+  document.getElementById('sn-action').textContent=`comprou ${s.product}`;
+  document.getElementById('sn-time').textContent=TIMES[Math.floor(Math.random()*TIMES.length)];
+
+  n.classList.remove('hide');
+  n.classList.add('show');
+
+  setTimeout(()=>{
+    n.classList.remove('show');
+    n.classList.add('hide');
+  }, 4500);
+}
+
+setTimeout(()=>{
+  showSale();
+  setInterval(showSale,20000);
+}, 5000);
+
+/* ─── SCROLL REVEAL ─── */
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('on'),i*45); obs.unobserve(e.target); } });
+},{threshold:.06});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+
+<!-- ====== TRACKING: VISITA + CLIQUES ====== -->
+<script>
+(() => {
+  const ENDPOINT    = 'https://ronaldotenorio.com/arsenalrt3/dados/registro.php';
+  const VISITOR_KEY = 'ptaf_visitor_id';
+
+  // ID único do visitante (persiste entre sessões)
+  let visitor_id = localStorage.getItem(VISITOR_KEY);
+  if (!visitor_id) {
+    visitor_id = (typeof crypto !== 'undefined' && crypto.randomUUID)
+      ? crypto.randomUUID()
+      : ('v_' + Math.random().toString(16).slice(2) + Date.now());
+    localStorage.setItem(VISITOR_KEY, visitor_id);
+  }
+
+  // ── Mapa de links externos ──
+  const LINK_MAP = [
+    { url: 'drive.google.com/drive/folders/18yfHNop-FMmDDw_3F8UePKportbO10TL', label: '⬇️ Download Grátis' },
+    { url: 'instagram.com/rtjobs',  label: '📸 Instagram' },
+    { url: 'youtube.com/watch',     label: '▶️ YouTube' },
+    { url: 'api.whatsapp.com/send', label: '💬 WhatsApp' }
+  ];
+
+  function mapLinkToLabel(href) {
+    if (!href) return '-';
+    const match = LINK_MAP.find(item => href.includes(item.url));
+    return match ? match.label : '-';
+  }
+
+  function cleanLink(href) {
+    // Encurta links longos do WhatsApp
+    if (href.includes('api.whatsapp.com/send')) {
+      try {
+        const u = new URL(href);
+        const phone = u.searchParams.get('phone') || '5582996783383';
+        return 'https://api.whatsapp.com/send/?phone=' + phone;
+      } catch(e) {}
+    }
+    return href;
+  }
+
+  function getUTMs() {
+    const p = new URLSearchParams(window.location.search);
+    return {
+      utm_source:   p.get('utm_source')   || '',
+      utm_medium:   p.get('utm_medium')   || '',
+      utm_campaign: p.get('utm_campaign') || '',
+      utm_content:  p.get('utm_content')  || ''
+    };
+  }
+
+  function deviceLabel() {
+    const ua = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(ua)) return 'iPhone';
+    if (/android/.test(ua))          return 'Android';
+    return 'Desktop';
+  }
+
+  // ── Geo com cache ──
+  let GEO_CACHE = null;
+  async function getGeo() {
+    if (GEO_CACHE) return GEO_CACHE;
+    try {
+      const res  = await fetch('https://ipapi.co/json/', { cache: 'no-store' });
+      const data = await res.json();
+      GEO_CACHE  = {
+        ip:      data.ip           || '',
+        city:    data.city         || '',
+        region:  data.region       || '',
+        country: data.country_name || ''
+      };
+    } catch {
+      GEO_CACHE = { ip: '', city: '', region: '', country: '' };
+    }
+    return GEO_CACHE;
+  }
+
+  // ── Envia log (beacon com fallback fetch) ──
+  function sendLog(payload) {
+    const body = JSON.stringify(payload);
+    if (navigator.sendBeacon) {
+      const ok = navigator.sendBeacon(ENDPOINT, new Blob([body], { type: 'application/json' }));
+      if (ok) return;
+    }
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body,
+      keepalive: true
+    }).catch(() => {});
+  }
+
+  // ── TRACKING: VISITA ──
+  (async () => {
+    const geo = await getGeo();
+    const utm = getUTMs();
+    // Se não veio UTM, marca como GitHub Pages automaticamente
+    if (!utm.utm_source) {
+      utm.utm_source   = 'github';
+      utm.utm_medium   = 'pages';
+      utm.utm_campaign = 'arsenal_redirect';
+    }
+    sendLog({
+      type:       'visit',
+      visitor_id,
+      when_iso:   new Date().toISOString(),
+      page:       location.href,
+      origem:     deviceLabel(),
+      acesso:     document.referrer ? 'Referência' : 'Acesso direto',
+      ref:        document.referrer || '',
+      portal:     'GitHub Pages',
+      ...utm,
+      ...geo
+    });
+  })();
+
+  // ── TRACKING: CLIQUES ──
+  document.addEventListener('click', async (e) => {
+    let label = null;
+    let link  = '';
+    let navigateTo = null; // URL para navegar depois do log
+
+    // — Botão Adicionar ao Carrinho —
+    if (e.target.closest('.btn-add')) {
+      const card = e.target.closest('.pcard');
+      const name = card ? (card.querySelector('.pcard-name')?.textContent?.trim() || 'Ferramenta') : 'Ferramenta';
+      label = `🛒 Carrinho: ${name}`;
+      link  = 'carrinho';
+    }
+    // — Botão Mercado Pago —
+    else if (e.target.closest('.btn-mp')) {
+      const card = e.target.closest('.pcard');
+      const name = card ? (card.querySelector('.pcard-name')?.textContent?.trim() || 'Ferramenta') : 'Ferramenta';
+      const a2   = e.target.closest('a');
+      label      = `💳 Mercado Pago: ${name}`;
+      link       = a2 ? a2.href : 'mercadopago';
+      navigateTo = a2 ? a2.href : null;
+    }
+    // — Botão WhatsApp Comprovante —
+    else if (e.target.closest('.btn-wa')) {
+      const card = e.target.closest('.pcard');
+      const name = card ? (card.querySelector('.pcard-name')?.textContent?.trim() || 'Ferramenta') : 'Ferramenta';
+      const a2   = e.target.closest('a');
+      label      = `📲 WhatsApp Comprovante: ${name}`;
+      link       = 'whatsapp-comprovante';
+      navigateTo = a2 ? a2.href : null;
+    }
+    // — Ícone carrinho no card —
+    else if (e.target.closest('.pcard-icon')) {
+      const card = e.target.closest('.pcard');
+      const name = card ? (card.querySelector('.pcard-name')?.textContent?.trim() || 'Ferramenta') : 'Ferramenta';
+      label = `🛍 Ícone Carrinho: ${name}`;
+      link  = 'carrinho-icone';
+    }
+    // — Finalizar carrinho —
+    else if (e.target.closest('#btn-checkout')) {
+      label = '💳 Finalizar Carrinho';
+      link  = 'checkout';
+    }
+    // — Abrir carrinho —
+    else if (e.target.closest('.cart-pill')) {
+      label = '🛒 Abriu Carrinho';
+      link  = 'abrir-carrinho';
+    }
+    // — Navegação inferior —
+    else if (e.target.closest('.nav-item')) {
+      const lbl = e.target.closest('.nav-item')?.querySelector('.nav-label')?.textContent?.trim() || 'Nav';
+      label = `🧭 Nav: ${lbl}`;
+      link  = 'navegacao-interna';
+    }
+    // — Ver Todos —
+    else if (e.target.closest('.sec-head a')) {
+      label = '📋 Ver Todos os produtos';
+      link  = e.target.closest('a')?.href || 'ver-todos';
+    }
+    // — Carousel —
+    else if (e.target.closest('.slide-btn')) {
+      label = '🎠 Carousel: Ver produtos';
+      link  = e.target.closest('a')?.href || 'carousel';
+    }
+    // — WhatsApp flutuante —
+    else if (e.target.closest('.wa-float')) {
+      const a2   = e.target.closest('a');
+      label      = '💬 WhatsApp Suporte';
+      link       = a2 ? cleanLink(a2.href) : 'whatsapp-suporte';
+      navigateTo = a2 ? a2.href : null;
+    }
+    // — Rodapé —
+    else if (e.target.closest('footer a')) {
+      const a2   = e.target.closest('a');
+      const href = a2?.href || '';
+      if (href.includes('instagram'))     label = '📸 Rodapé: Instagram';
+      else if (href.includes('youtube'))  label = '▶️ Rodapé: YouTube';
+      else if (href.includes('whatsapp')) label = '💬 Rodapé: WhatsApp';
+      else                                label = '🌐 Rodapé: Site';
+      link       = href;
+      navigateTo = href;
+    }
+    // — Download Grátis —
+    else if (e.target.closest('a[href*="drive.google"]')) {
+      const a2   = e.target.closest('a');
+      label      = '⬇️ Download Grátis';
+      link       = a2 ? a2.href : 'drive';
+      navigateTo = a2 ? a2.href : null;
+    }
+    // — Qualquer outro link externo —
+    else {
+      const a = e.target.closest('a');
+      if (!a || !a.href) return;
+      if (a.href.includes('#')) return;                      // âncoras internas: ignora
+      if (a.href.startsWith(location.origin)) return;       // links internos: ignora
+      label      = mapLinkToLabel(a.href) !== '-'
+                     ? mapLinkToLabel(a.href)
+                     : `🔗 ${a.textContent?.trim()?.slice(0, 40) || a.href}`;
+      link       = cleanLink(a.href);
+      navigateTo = a.href;
+    }
+
+    if (!label) return;
+
+    // Bloqueia navegação temporariamente para garantir envio do log
+    if (navigateTo) e.preventDefault();
+
+    const geo = await getGeo();
+    const utmC = getUTMs();
+    if (!utmC.utm_source) {
+      utmC.utm_source   = 'github';
+      utmC.utm_medium   = 'pages';
+      utmC.utm_campaign = 'arsenal_redirect';
+    }
+    sendLog({
+      type:       'click',
+      visitor_id,
+      when_iso:   new Date().toISOString(),
+      page:       location.href,
+      link:       link,
+      link_text:  label,
+      origem:     deviceLabel(),
+      acesso:     document.referrer ? 'Referência' : 'Acesso direto',
+      ref:        document.referrer || '',
+      portal:     'GitHub Pages',
+      ...utmC,
+      ...geo
+    });
+
+    // Navega após 200ms (tempo para o beacon ser enviado)
+    if (navigateTo) {
+      setTimeout(() => { window.open(navigateTo, '_blank'); }, 200);
+    }
+
+  }, { capture: true });
+
+})();
+</script>
+
+</body>
+</html>
