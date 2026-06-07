@@ -1,4 +1,0 @@
-<IfModule mod_deflate.c>
-    # Habilita compressão Gzip
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
-</IfModule>
